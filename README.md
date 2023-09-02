@@ -83,10 +83,10 @@ server {
     # Add WebSocket configuration here
     #location /app/app-key {
     #   proxy_pass http://localhost:6001;
-    #    proxy_http_version 1.1;
+    #   proxy_http_version 1.1;
     #   proxy_set_header Upgrade $http_upgrade;
-    #    proxy_set_header Connection "Upgrade";
-    #    proxy_set_header Host $host;
+    #   proxy_set_header Connection "Upgrade";
+    #   proxy_set_header Host $host;
     #}
 
     location = /favicon.ico { access_log off; log_not_found off; }
