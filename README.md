@@ -124,7 +124,10 @@ service nginx reload
 8. To secure your site with HTTPS, we'll use Certbot. Run the following commands to install and configure Certbot for Nginx:
 
 ```sh
-(Your existing certbot commands here)
+sudo snap install --classic certbot \
+&& sudo ln -s /snap/bin/certbot /usr/bin/certbot \
+&& sudo certbot --nginx \
+&& sudo certbot renew --dry-run 
 ```
 
 ## Setting Up Cron for Laravel Tasks
