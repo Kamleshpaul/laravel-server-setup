@@ -114,3 +114,12 @@ snap install --classic certbot \
 && certbot renew --dry-run 
 ```
 
+* Setup `cron`
+
+`sudo crontab -e` 
+put this code 
+
+```sh
+* * * * * cd /srv/example.com && php artisan schedule:run >> /dev/null 2>&1
+```
+
