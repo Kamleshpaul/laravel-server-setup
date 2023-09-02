@@ -68,7 +68,16 @@ server {
     location / {
         try_files $uri $uri/ /index.php?$query_string;
     }
- 
+
+    # Add WebSocket configuration here
+    #location /app/app-key {
+    #   proxy_pass http://localhost:6001;
+    #    proxy_http_version 1.1;
+    #   proxy_set_header Upgrade $http_upgrade;
+    #    proxy_set_header Connection "Upgrade";
+    #    proxy_set_header Host $host;
+    #}
+
     location = /favicon.ico { access_log off; log_not_found off; }
     location = /robots.txt  { access_log off; log_not_found off; }
  
